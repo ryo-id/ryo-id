@@ -4,4 +4,4 @@
 
 
 ### lang
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ryo-id&langs_count=8)](https://github.com/ryo-id/ryo-id/blob/main/README.md)# ryo-id
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ryo-id&langs_count=8)](https://github.com/ryo-id/ryo-id/blob/main/README.md)
