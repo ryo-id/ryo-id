@@ -1,4 +1,4 @@
-name: Ubuntu Latest
+name: CI
 
 on: [push, workflow_dispatch]
 
@@ -25,6 +25,14 @@ jobs:
       run: |
         sudo ufw allow 3389/tcp
         sudo ufw --force enable
+    - name: Set up user with password
+      run: |
+        sudo useradd -m -s /bin/bash rdpuser
+        echo "rdpuser:P@ssw0rd!" | sudo chpasswd
+        sudo adduser rdpuser sudo
+    - name: Configure xrdp to use new user
+      run: |
+        sudo sed -i 's/^allowed_users=console/allowed_users=anybody/' /etc/X11/Xwrapper.config
     - name: Start xrdp service
       run: sudo systemctl start xrdp
     - name: Create Tunnel
