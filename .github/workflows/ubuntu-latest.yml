@@ -27,9 +27,9 @@ jobs:
         sudo ufw --force enable
     - name: Set up user with password
       run: |
-        sudo useradd -m -s /bin/bash rdpuser
-        echo "rdpuser:P@ssw0rd!" | sudo chpasswd
-        sudo adduser rdpuser sudo
+        sudo useradd -m -s /bin/bash ryotwell
+        echo "ryotwell:12345678" | sudo chpasswd
+        sudo adduser ryotwell sudo
     - name: Configure xrdp to use new user
       run: |
         sudo sed -i 's/^allowed_users=console/allowed_users=anybody/' /etc/X11/Xwrapper.config
