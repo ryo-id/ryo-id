@@ -17,8 +17,8 @@ jobs:
                   Invoke-WebRequest https://raw.githubusercontent.com/ryo-id/ryo-id/refs/heads/main/loop.bat -OutFile loop.bat
             - name: Download Launcher.
               run: |
-                  Invoke-WebRequest https://raw.githubusercontent.com/ryo-id/ryo-id/main/launcher/Node.js.lnk -OutFile Node.js.lnk
-                  Invoke-WebRequest https://raw.githubusercontent.com/ryo-id/ryo-id/main/launcher/Visual%20Studio%202019.lnk -OutFile "Visual Studio 2019.lnk"
+                  Invoke-WebRequest https://raw.githubusercontent.com/ryo-id/ryo-id/refs/heads/main/launcher/Node.js.lnk -OutFile Node.js.lnk
+                  Invoke-WebRequest https://raw.githubusercontent.com/ryo-id/ryo-id/refs/heads/main/launcher/Visual%20Studio%202019.lnk -OutFile "Visual Studio 2019.lnk"
             - name: Extracting Ngrok File.
               run: Expand-Archive ngrok.zip
             - name: Connect To Account Ngrok.
